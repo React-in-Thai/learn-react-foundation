@@ -26,7 +26,29 @@
 ```js
 function App() {
   const [selectedSize, setSelectedSize] = React.useState(null);
-  const [selectedColor, setSelectedColor] = React.useState(null);
-  return null
+  return (
+    <div>
+      <p style={{ fontWeight: "bold", marginBottom: "0.25rem" }}>Color</p>
+
+      <input type="radio" id="color-red" name="color" value="red" />
+      <label htmlFor="color-red" style={{ marginLeft: "0.5rem" }}>
+        Red
+      </label>
+      <br />
+
+      <input type="radio" id="color-blue" name="color" value="blue" />
+      <label htmlFor="color-blue" style={{ marginLeft: "0.5rem" }}>
+        Blue
+      </label>
+      <br />
+
+      <input type="radio" id="color-green" name="color" value="green" />
+      <label htmlFor="color-green" style={{ marginLeft: "0.5rem" }}>
+        Green
+      </label>
+    </div>
+  )
 }
 ```
+
+

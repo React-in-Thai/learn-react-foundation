@@ -20,7 +20,7 @@ function Counter() {
   return (
     <div>
       <span>{count}</span>
-      <button onClick={() => setCount(c => c + 1)}>increment</button>
+      <button onClick={() => setCount(count + 1)}>increment</button>
     </div>
   )
 }
@@ -154,3 +154,59 @@ function MemberTable() {
 แก้ logic ตรง filter ให้เป็น case insensitive. ถ้าพิม `s` ตัวเล็ก ต้องแสดง Tony Stark อันเดียว
 ```
 
+### ตัวอย่างที่ 3 - magic counter
+
+```js
+import React from 'react';
+
+function Counter() {
+  const [count, setCount] = React.useState(0);
+  return (
+    <div>
+      <span>{count}</span>
+      <button onClick={() => {
+        setCount(count + 1);
+        setTimeout(() => {
+          setCount(count + 1);
+        }, [3000])
+      }}>increment</button>
+    </div>
+  )
+}
+```
+
+ส่วนใหญ่แล้วความยากของการเขียน React จะเกิดขึ้นเมื่อเราต้องยุ่งกับ asynchronous task เช่น `setTimeout` เป็นต้น.
+
+**Question**
+จากตัวอย่างด้านบน ถ้ากด `increment` หนึ่งครั้ง แล้วรอไปอีก 3 วินาที สุดท้ายแล้วจะเห็นค่า count บนหน้าจอเป็นเท่าไหร่?
+
+ทำไมถึงได้คำตอบเช่นนั้น เนื่องจากว่า function ถือว่าเป็นส่วนหนึ่งใน snapshot ด้วย ในแต่ละ snapshot จะมีค่าไม่เหมือนกัน
+
+**Snapshot 0** (หลังจากการ render แล้ว)
+
+![image](https://user-images.githubusercontent.com/18292247/147389006-732ec2b2-651b-4fe9-8c87-cd54deffab66.png)
+
+จะเห็นว่าเราสามารถนำค่า count เข้าไปแทนค่าตัวแปรใน function ได้เลย
+
+เมื่อผมกดปุ่ม `increment`:
+
+1. ฟังกชั่นที่อยู่ใน `onClick` จะทำงาน
+2. `setCount` ถูกเรียก
+3. function ใน `setTimeout` เข้า microtask queue
+4. React ทำการ update state ของ count เป็น 1
+5. Counter เกิดการ rerender ด้วยค่า count = 1
+6. ค่า 1 แสดงบนหน้าจอ
+7. 3 วินาทีผ่านไป `() => { setCount(0 + 1) }` ถูกเรียกซึ่งผลลัพธ์มีค่าเท่ากับ state ณ ตอนนั้น react จึงไม่ทำอะไร
+
+แล้วถ้าเราต้องการใช้ค่าล่าสุดใน `setTimeout` ต้องทำอย่างไร?
+
+React มีวิธีให้เราอ่านค่าล่าสุดของ state ได้ โดยใช้ callback ใน `setState` อย่างเช่นในกรณีนี้เราต้องการให้ค่า count เพิ่มขึ้นอีกหนึ่งหลังจาก timeout เราจะเขียนได้แบบนี้
+
+```js
+setTimeout(() => {
+  // latestCount คือค่าล่าสุด เราไม่สามารถบอกได้แน่นอนว่ามีค่าเท่าไหร่
+  // เพราะ ค่า latestCount อาจถูกเปลี่ยนแปลงมาจากที่อื่น แต่ React จะการันตีว่า
+  // ณ ตอนนี้ `setCount` ถูกเรียก React จะส่งค่า state ล่าสุดมาให้เราใน callback
+  setCount(latestCount => latestCount + 1);
+}, [3000])
+```
