@@ -35,11 +35,12 @@ function App() {
                 Edit
               </button>
               <button
-                onClick={() =>
-                  setNotes((latestNotes) =>
+                onClick={() => {
+                  setSelectedNote(null);
+                  return setNotes((latestNotes) =>
                     latestNotes.filter((item) => item.id !== note.id)
-                  )
-                }
+                  );
+                }}
               >
                 Delete
               </button>
