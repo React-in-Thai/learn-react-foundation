@@ -43,10 +43,19 @@
 
 - [clone โปรเจคลงในเครื่อง](https://github.com/React-in-Thai/learn-react-foundation.git)
 - เปิดด้วย [VSCode](https://code.visualstudio.com/download) (IDE อื่นสามารถใช้ได้เช่นกัน)
+- ติดตั้ง `serve` ด้วย yarn หรือ npm
+  ```bash
+  yarn global add serve
+  ```
+  or
+  ```bash
+  npm install -g serve
+  ```
+- เปิดโปรเจคขึ้นมาแล้วรัน `serve` ได้เลย
 
 > คิดว่ารองรับทั้ง mac และ window นะครับ ถ้าติดปัญหาอะไรลองหาวิธีแก้ด้วยตัวเองก่อน(เพราะคุณจะต้องเจออีกเยอะ) แต่ถ้าไม่ได้จริงๆให้เปิด [issue](https://github.com/React-in-Thai/learn-react-foundation/issues) ไว้
 
 ## โครงสร้าง repo
 
-- สคริปตอนพูดในวิดีโอจะอยู่ในโฟลเดอร์ `/lessons/$lesson_number/README.md` (สคริปจะไม่ตรงกับในวิดีโอเป๊ะๆ)
+- สคริปตอนพูดในวิดีโอจะอยู่ในโฟลเดอร์ `/lessons/$lesson_number/$lesson_number.md` (สคริปจะไม่ตรงกับในวิดีโอเป๊ะๆ)
 
