@@ -1,6 +1,11 @@
-# บทเรียน 3 - Mental Model
+# บทเรียน 2 - Mental Model
 
-สำหรับท่านใดที่ยังไม่เคยใช้งาน React มาก่อน ผมอยากให้ลองทำ [Official Tutorial](https://reactjs.org/tutorial/tutorial.html) ให้เสร็จก่อนนะครับ เพราะว่าผมจะไม่อธิบายพื้นฐานมากนัก. ส่วนท่านใดที่มีพื้นฐาน React อยู่แล้ว เรามาเริ่มกันเลยครับ...
+สำหรับท่านใดที่ยังไม่เคยใช้งาน React มาก่อน ผมอยากให้ลองทำ
+
+1. [Official Tutorial](https://reactjs.org/tutorial/tutorial.html): ในตัวอย่างเค้าจะใช้เป็น class component
+2. [Hooks at a Glance](https://reactjs.org/docs/hooks-overview.html) เพื่อปูพื้นฐาน react hook
+
+เพราะว่าผมจะไม่อธิบายพื้นฐานมากนัก. ส่วนท่านใดที่มีพื้นฐาน React อยู่แล้ว เรามาเริ่มกันเลยครับ...
 
 ---
 
@@ -40,7 +45,7 @@ function Counter() {
 
 1. ฟังกชั่นที่อยู่ใน `onClick` จะทำงาน
 2. `setCount` ถูกเรียก
-3. React นำ `(c => c + 1)` เข้าไปใน state update queue
+3. React นำ `(0 + 1)` เข้าไปใน state update queue
 4. React ทำการ update state
 
 เราจะได้หน้าตาของ snapshot 1 เป็นแบบนี้
@@ -52,7 +57,7 @@ function Counter() {
 
 ✍️ **Challenge**
 ```
-ให้วาด Snapshot 2 เมื่อกดปุ่ม increment อีกครั้ง
+ให้เขียนสิ่งที่เกิดขึ้นและวาด Snapshot 2 เมื่อกดปุ่ม increment อีกครั้ง
 ```
 สามารถวาดลงบนบราวเซอร์ผ่าน [Exclaridraw](https://excalidraw.com/) ได้.
 
