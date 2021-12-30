@@ -223,4 +223,15 @@ setTimeout(() => {
 
 ## การบ้านท้ายบท
 
-เปิดไฟล์ `./index.js` ขึ้นมา
+โค้ดอยู่ใน `./homework.js`, ให้ uncomment homework script ใน `index.html` เพื่อแสดงผลบน browser
+
+```html
+<body>
+  <!-- ...other links -->
+
+  <!-- <script type="text/babel" data-type="module" src="./index.js"></script> -->
+  <script type="text/babel" data-type="module" src="./homework.js"></script>
+</body>
+```
+
+จากนั้น save แล้ว refresh บน browser อีกครั้ง
