@@ -84,6 +84,27 @@ react team ก็เลยตัดสินใจแยก react core ที่
 - เครื่องมือสำหรับ developer เช่น react devtools ที่สามารถ track การทำงานในโหมด asynchronous ได้
 - ทำให้เราควบคุมการจัดลำดับงาน และบอก React ได้ว่างานไหนสำคัญ ผ่าน [startTransition API](https://reactjs.org/docs/concurrent-mode-patterns.html#transitions)
 
+---
+
+📚 อ้างอิง
+
+- https://indepth.dev/in-depth-explanation-of-state-and-props-update-in-react/
+- https://indepth.dev/the-how-and-why-on-reacts-usage-of-linked-list-in-fiber
+- [[JSConfUS 2013] Tom Occhino and Jordan Walke: JS Apps at Facebook](https://www.youtube.com/watch?v=GW0rj4sNH2w&t=186s)
+- [006 - Origins of React](https://www.youtube.com/watch?v=yiCnfJ1rflI&t=1759s)
+- [Introduction to React.js](https://www.youtube.com/watch?v=XxVg_s8xAms)
+- [Pete Hunt - The Secrets of React's Virtual DOM (FutureJS 2014)](https://www.youtube.com/watch?v=-DX3vJiqxm4&t=1s)
+- https://reactjs.org/blog/2015/10/07/react-v0.14.html#changelog
+- [Andrew Clark: What's Next for React — ReactNext 2016](https://www.youtube.com/watch?v=aV1271hd9ew)
+- https://github.com/acdlite/react-fiber-architecture
+- https://indepth.dev/inside-fiber-in-depth-overview-of-the-new-reconciliation-algorithm-in-react/
+- [Lin Clark - A Cartoon Intro to Fiber - React Conf 2017](https://www.youtube.com/watch?v=ZCuYPiUIONs)
+- [SMOOSHCAST: React Fiber Deep Dive with Dan Abramov](https://www.youtube.com/watch?v=aS41Y_eyNrU)
+- [Why, What, and How of React Fiber with Dan Abramov and Andrew Clark](https://www.youtube.com/watch?v=crM1iRVGpGQ)
+- [Brief Overview of React Fiber - A Tutorial on its Features and Advantages](https://www.youtube.com/watch?v=0fUmOPQUv-Q)
+- https://reactjs.org/docs/codebase-overview.html#fiber-reconciler
+- https://reactjs.org/docs/implementation-notes.html
+- https://reactjs.org/docs/design-principles.html
 
 
 
