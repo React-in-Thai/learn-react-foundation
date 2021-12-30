@@ -4,10 +4,12 @@
 function Counter() {
   const [count, setCount] = React.useState(0);
   return (
-    <div>
+    <React.Fragment>
       <span>{count}</span>
-      <button onClick={() => setCount(count + 1)}>increment</button>
-    </div>
+      <button onClick={() => setCount(count + 1)}>
+        increment
+      </button>
+    </React.Fragment>
   );
 }
 
@@ -20,19 +22,25 @@ const MEMBERS = [
   { name: "Ant man", level: 38, alive: true },
 ];
 
-function MemberTable() {
+function Search() {
   // TODO: ควรจะมี state อะไรเก็บไว้บ้าง หากต้องการให้ค้นหาชื่อได้
   return (
-    <div>
+    <React.Fragment>
       <input placeholder="พิมชื่อเพื่อค้นหา..." />
       {MEMBERS.map((member) => (
-        <div style={{ display: "flex" }}>
-          <div style={{ flexBasis: "40%" }}>{member.name}</div>
-          <div style={{ flexBasis: "30%" }}>{member.level}</div>
-          <div style={{ flexBasis: "30%" }}>{member.alive}</div>
+        <div key={member.name} style={{ display: "flex" }}>
+          <div style={{ flexBasis: "40%" }}>
+            {member.name}
+          </div>
+          <div style={{ flexBasis: "30%" }}>
+            {member.level}
+          </div>
+          <div style={{ flexBasis: "30%" }}>
+            {member.alive}
+          </div>
         </div>
       ))}
-    </div>
+    </React.Fragment>
   );
 }
 
@@ -42,7 +50,7 @@ function MemberTable() {
 function MagicCounter() {
   const [count, setCount] = React.useState(0);
   return (
-    <div>
+    <React.Fragment>
       <span>{count}</span>
       <button
         onClick={() => {
@@ -54,7 +62,7 @@ function MagicCounter() {
       >
         increment
       </button>
-    </div>
+    </React.Fragment>
   );
 }
 
