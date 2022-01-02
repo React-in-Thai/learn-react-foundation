@@ -12,10 +12,16 @@ const NoteList = ({ notes, onPickNote, onDeleteNote }) => {
 };
 
 const NoteEditor = ({ note, onSave }) => {
-  const [title, setTitle] = React.useState(note?.title || "");
-  const [content, setContent] = React.useState(note?.content || "");
+  const [title, setTitle] = React.useState("");
+  const [content, setContent] = React.useState("");
   const [history, setHistory] = React.useState([]);
   const [future, setFuture] = React.useState([]);
+  React.useEffect(() => {
+    if (note) {
+      setTitle(note.title);
+      setContent(note.content);
+    }
+  }, [note]);
   return (
     <React.Fragment>
       <label htmlFor="title">Title</label>

@@ -1,58 +1,158 @@
-function getProductStock(color, size) {
-  const mapping = {
-    "red-small": 1,
-    "red-medium": 0,
-    "red-large": 12,
-    "blue-small": 7,
-    "blue-medium": 3,
-    "blue-large": 0,
-    "green-small": 0,
-    "green-medium": 9,
-    "green-large": 0,
-  };
-  return mapping[`${color}-${size}`] || 0;
-}
-
-function App() {
-  const colors = ["red", "blue", "green"];
-  const sizes = ["small", "medium", "large"];
-  const quantity = getProductStock(selectedColor, selectedSize);
+/**
+ * Homework:
+ * - refactor component to NoteList & NoteEditor
+ * - refactor NoteEditor state to useTimeTravel
+ */
+function NoteApp() {
+  const [title, setTitle] = React.useState("");
+  const [content, setContent] = React.useState("");
+  const [history, setHistory] = React.useState([]);
+  const [future, setFuture] = React.useState([]);
+  const [notes, setNotes] = React.useState([]);
+  const [selectedNote, setSelectedNote] = React.useState(null);
   return (
-    <div style={{ maxWidth: 343, margin: "auto" }}>
-      <p style={{ fontWeight: "bold", marginBottom: "0.25rem" }}>Color</p>
+    <div
+      style={{ maxWidth: 400, margin: "auto", display: "flex", gap: "1rem" }}
+    >
+      <div
+        style={{
+          flexBasis: 120,
+          borderRight: "1px solid #e5e5e5",
+          padding: "1rem",
+        }}
+      >
+        {notes.map((note, index) => (
+          <div key={index} style={{ borderBottom: "1px solid #e5e5e5" }}>
+            <p style={{ fontWeight: "bold", fontSize: "0.875rem" }}>
+              {note.title}
+            </p>
+            <p style={{ fontSize: "0.75rem" }}>
+              {(note.content || "").slice(0, 40)}
+            </p>
+            <div style={{ display: "flex", gap: "0.25rem" }}>
+              <button
+                onClick={() => {
+                  setSelectedNote(note);
+                  setTitle(note.title);
+                  setContent(note.content);
+                }}
+              >
+                Edit
+              </button>
+              <button
+                onClick={() => {
+                  setSelectedNote(null);
+                  return setNotes((latestNotes) =>
+                    latestNotes.filter((item) => item.id !== note.id)
+                  );
+                }}
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div>
+        <h1 style={{ fontSize: "1.25rem" }}>Note Editor</h1>
 
-      {colors.map((color) => (
-        <React.Fragment>
+        <label htmlFor="title">Title</label>
+        <div>
           <input
-            type="radio"
-            id={`color-${color}`}
-            name="color"
-            value={color}
+            id="title"
+            value={title}
+            onChange={(event) => {
+              setTitle(event.target.value);
+              setHistory((latestHistory) => [
+                { title, content },
+                ...latestHistory,
+              ]);
+            }}
           />
-          <label htmlFor={`color-${color}`} style={{ marginLeft: "0.5rem" }}>
-            {color.substring(0, 1).toUpperCase()}
-            {color.substring(1)}
-          </label>
-          <br />
-        </React.Fragment>
-      ))}
+        </div>
+        <br />
 
-      <p style={{ fontWeight: "bold", marginBottom: "0.25rem" }}>Size</p>
+        <label htmlFor="content">content</label>
+        <div>
+          <textarea
+            id="content"
+            value={content}
+            onChange={(event) => {
+              setContent(event.target.value);
+              setHistory((latestHistory) => [
+                { title, content },
+                ...latestHistory,
+              ]);
+            }}
+          />
+        </div>
 
-      {sizes.map((size) => (
-        <React.Fragment>
-          <input type="radio" id={`size-${size}`} name="size" value={size} />
-          <label htmlFor={`size-${size}`} style={{ marginLeft: "0.5rem" }}>
-            {size.substring(0, 1).toUpperCase()}
-            {size.substring(1)}
-          </label>
-          <br />
-        </React.Fragment>
-      ))}
-
-      <br />
-
-      <button disabled={!quantity}>Add to cart</button>
+        <br />
+        <div style={{ display: "flex", gap: "0.5rem" }}>
+          <button
+            disabled={!history.length}
+            onClick={() => {
+              const previousNote = history[0];
+              if (previousNote) {
+                setTitle(previousNote.title);
+                setContent(previousNote.content);
+                setHistory((latestHistory) => latestHistory.slice(1));
+                setFuture((latestFuture) => [
+                  { title, content },
+                  ...latestFuture,
+                ]);
+              }
+            }}
+          >
+            Undo
+          </button>
+          <button
+            disabled={!future.length}
+            onClick={() => {
+              const lastNote = future[0];
+              if (lastNote) {
+                setTitle(lastNote.title);
+                setContent(lastNote.content);
+                setHistory((latestHistory) => [
+                  { title, content },
+                  ...latestHistory,
+                ]);
+                setFuture((latestFuture) => latestFuture.slice(1));
+              }
+            }}
+          >
+            Redo
+          </button>
+          <button
+            disabled={!title}
+            style={{ width: 80 }}
+            onClick={() => {
+              setTitle("");
+              setContent("");
+              setFuture([]);
+              setHistory([]);
+              if (selectedNote) {
+                setNotes((latestNotes) =>
+                  latestNotes.map((item) => {
+                    if (item.id === selectedNote.id) {
+                      return { ...item, title, content };
+                    }
+                    return item;
+                  })
+                );
+                setSelectedNote(null);
+              } else {
+                setNotes((latestNotes) => [
+                  { id: Date.now(), title, content },
+                  ...latestNotes,
+                ]);
+              }
+            }}
+          >
+            Save
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

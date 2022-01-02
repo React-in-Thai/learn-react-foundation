@@ -19,8 +19,6 @@ const useTimeTravel = (data) => {
   React.useEffect(() => {
     if (data) {
       setPresent(data);
-      setHistory([]);
-      setFuture([]);
     }
   }, [data]);
 
@@ -28,8 +26,8 @@ const useTimeTravel = (data) => {
     present,
     history,
     future,
-    update: (shallowItem) => {
-      setPresent({ ...present, ...shallowItem });
+    update: (partialData) => {
+      setPresent((latestPresent) => ({ ...latestPresent, ...partialData }));
       setHistory((latestHistory) => [present, ...latestHistory]);
     },
     undo: () => {
@@ -56,27 +54,24 @@ const useTimeTravel = (data) => {
   };
 };
 
-const NoteEditor = ({ note: noteProp, onSave }) => {
-  const memoNote = React.useMemo(
-    () => noteProp || { title: "", content: "" },
-    [noteProp]
-  );
+const NoteEditor = ({ note, onSave }) => {
+  const defaultNote = React.useMemo(() => ({ title: "", content: "" }), []);
   const {
     history,
-    present: note,
+    present: { title, content },
     future,
     update,
     undo,
     redo,
     reset,
-  } = useTimeTravel(memoNote);
+  } = useTimeTravel(note || defaultNote);
   return (
     <React.Fragment>
       <label htmlFor="title">Title</label>
       <div>
         <input
           id="title"
-          value={note?.title || ""}
+          value={title}
           onChange={(event) => {
             update({ title: event.target.value });
           }}
@@ -88,7 +83,7 @@ const NoteEditor = ({ note: noteProp, onSave }) => {
       <div>
         <textarea
           id="content"
-          value={note?.content || ""}
+          value={content}
           onChange={(event) => {
             update({ content: event.target.value });
           }}
@@ -114,11 +109,11 @@ const NoteEditor = ({ note: noteProp, onSave }) => {
           Redo
         </button>
         <button
-          disabled={!note?.title}
+          disabled={!title}
           style={{ width: 80 }}
           onClick={() => {
             reset({ title: "", content: "" });
-            onSave(note);
+            onSave({ title, content });
           }}
         >
           Save
