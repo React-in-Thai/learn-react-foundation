@@ -15,7 +15,7 @@
 
 # บทเรียน 1 - ประวัติศาสตร์, ปัจจุบัน และ อนาคต
 
-> Video ประกอบการสอน: [https://www.youtube.com/watch?v=fI06CT84FRQ](https://www.youtube.com/watch?v=fI06CT84FRQ&list=PLLPNfc7CgMywiG-R6Jix_w8zqF_fxZFxr)
+> Video ประกอบการสอน: [https://www.youtube.com/watch?v=gglRX8qsJus](https://www.youtube.com/watch?v=gglRX8qsJus&list=PLLPNfc7CgMywiG-R6Jix_w8zqF_fxZFxr)
 
 การเรียนรู้ประวัติศาสตร์เป็นจุดเริ่มต้นที่สำคัญที่จะทำให้เราเข้าใจว่า React นั้นเกิดขึ้นมาเพื่อจุดประสงค์อะไร คนที่สร้าง React ต้องการแก้ปัญหาอะไร และทำไม React ถึงได้ถูกออกแบบมาในลักษณะนี้
 
