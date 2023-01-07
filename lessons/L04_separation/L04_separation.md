@@ -72,9 +72,9 @@ Component นี้ควรทำหน้าที่ในการแสด�
   </span>
 </div>
 <div align="center">
-  <a href="../../README.md" style="font-size: 24px;">
-    <font size="4">
+  <font size="4">
+    <a href="../../README.md" style="font-size: 24px;">
       &gt;&gt;&gt; ไปหน้าสารบัญ &lt;&lt;&lt;
-    </font>
-  </a>
+    </a>
+  </font>
 </div>
