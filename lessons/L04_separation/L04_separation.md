@@ -3,7 +3,7 @@
     ◀ Previous Lesson
   </a>
   &nbsp;|&nbsp;
-  <a href="#">
+  <a>
     Next Lesson ▶ (coming soon)
   </a>
 </div>
@@ -62,12 +62,9 @@ Component นี้ควรทำหน้าที่ในการแสด�
     ◀ Previous Lesson
   </a>
   &nbsp;|&nbsp;
-  <span>
-    <a href="#">
-      Next Lesson ▶
-    </a>
-    (coming soon)
-  </span>
+  <a>
+    Next Lesson ▶ (coming soon)
+  </a>
 </div>
 <div align="center">
   <a href="../../README.md" style="font-size: 24px;">
