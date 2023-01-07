@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="../L00_getting-started/L00_getting-started.md">
+  <a href="../L01_introduction/L01_introduction.mdd">
     ◀ Previous Lesson
   </a>
   &nbsp;|&nbsp;
@@ -256,7 +256,7 @@ setTimeout(() => {
 ---
 
 <div align="center">
-  <a href="../L00_getting-started/L00_getting-started.md">
+  <a href="../L01_introduction/L01_introduction.mdd">
     ◀ Previous Lesson
   </a>
   &nbsp;|&nbsp;
