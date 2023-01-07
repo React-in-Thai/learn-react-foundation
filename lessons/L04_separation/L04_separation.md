@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="/lessons/L03_managing-state/L03_managing-state.md">
+  <a href="../L03_managing-state/L03_managing-state.md">
     ◀ Previous Lesson
   </a>
   &nbsp;|&nbsp;
