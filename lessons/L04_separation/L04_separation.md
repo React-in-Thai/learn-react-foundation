@@ -1,15 +1,19 @@
-<div style="display:flex; justify-content: space-between">
+<div align="center">
   <a href="/lessons/L03_managing-state/L03_managing-state.md">
     ◀ Previous Lesson
   </a>
-  |
+  &nbsp;|&nbsp;
   <a href="#">
     Next Lesson ▶ (coming soon)
   </a>
 </div>
-<a href="../../README.md" style="font-size: 24px;">
-  &lt;&lt;&lt; ไปหน้าสารบัญ &gt;&gt;&gt;
-</a>
+<div align="center">
+  <a href="../../README.md" style="font-size: 24px;">
+    <font size="4">
+      &gt;&gt;&gt; ไปหน้าสารบัญ &lt;&lt;&lt;
+    </font>
+  </a>
+</div>
 
 # บทที่ 4 - Separation
 
@@ -55,15 +59,22 @@ Component นี้ควรทำหน้าที่ในการแสด�
 
 ---
 
-<div style="display:flex; justify-content: space-between">
+<div align="center">
   <a href="/lessons/L03_managing-state/L03_managing-state.md">
     ◀ Previous Lesson
   </a>
-  |
-  <a href="#">
-    Next Lesson ▶ (coming soon)
+  &nbsp;|&nbsp;
+  <span>
+    <a href="#">
+      Next Lesson ▶
+    </a>
+    (coming soon)
+  </span>
+</div>
+<div align="center">
+  <a href="../../README.md" style="font-size: 24px;">
+    <font size="4">
+      &gt;&gt;&gt; ไปหน้าสารบัญ &lt;&lt;&lt;
+    </font>
   </a>
 </div>
-<a href="../../README.md" style="font-size: 24px;">
-  &lt;&lt;&lt; ไปหน้าสารบัญ &gt;&gt;&gt;
-</a>
