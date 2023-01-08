@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="../L01_introduction/L01_introduction.mdd">
+  <a href="../L01_introduction/L01_introduction.md">
     ◀ Previous Lesson
   </a>
   &nbsp;|&nbsp;

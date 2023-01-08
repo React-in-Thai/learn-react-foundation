@@ -3,7 +3,7 @@
     ◀ Previous Lesson
   </a>
   &nbsp;|&nbsp;
-  <a href="../L01_introduction/L01_introduction.mdd">
+  <a href="../L01_introduction/L01_introduction.md">
     Next Lesson ▶
   </a>
 </div>
