@@ -1,4 +1,21 @@
-# บทที่ 4 - seperation
+<div align="center">
+  <a href="../L03_managing-state/L03_managing-state.md">
+    ◀ Previous Lesson
+  </a>
+  &nbsp;|&nbsp;
+  <a>
+    Next Lesson ▶ (coming soon)
+  </a>
+</div>
+<div align="center">
+  <a href="../../README.md" style="font-size: 24px;">
+    &gt;&gt;&gt; ไปหน้าสารบัญ &lt;&lt;&lt;
+  </a>
+</div>
+
+# บทที่ 4 - Separation
+
+> Video ประกอบการสอน: [https://www.youtube.com/watch?v=8qZvs8T59XQ](https://www.youtube.com/watch?v=8qZvs8T59XQ&list=PLLPNfc7CgMywiG-R6Jix_w8zqF_fxZFxr)
 
 จากบทที่แล้วเราได้สร้าง note application ที่มีฟีเจอร์พอสมควรแล้ว แต่ก่อนที่เราจะเพิ่มฟีเจอร์เข้าไปอีก เรามาลอง refactor แอพของเราให้แบ่งการทำงานออกเป็นส่วนย่อยๆก่อนดีกว่า
 
@@ -36,4 +53,21 @@ Component นี้ควรทำหน้าที่ในการแสด�
 />
 ```
 
-📹 สำหรับการ refactor ดูในวิดีโอจะได้อรรถรสมากกว่า 😂
+📹 สำหรับการ refactor ดูใน[วิดีโอ](https://www.youtube.com/watch?v=8qZvs8T59XQ&list=PLLPNfc7CgMywiG-R6Jix_w8zqF_fxZFxr)จะได้อรรถรสมากกว่า 😂
+
+---
+
+<div align="center">
+  <a href="/lessons/L03_managing-state/L03_managing-state.md">
+    ◀ Previous Lesson
+  </a>
+  &nbsp;|&nbsp;
+  <a>
+    Next Lesson ▶ (coming soon)
+  </a>
+</div>
+<div align="center">
+  <a href="../../README.md" style="font-size: 24px;">
+    &gt;&gt;&gt; ไปหน้าสารบัญ &lt;&lt;&lt;
+  </a>
+</div>

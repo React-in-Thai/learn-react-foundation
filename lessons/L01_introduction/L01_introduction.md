@@ -1,4 +1,21 @@
+<div align="center">
+  <a href="../L00_getting-started/L00_getting-started.md">
+    ◀ Previous Lesson
+  </a>
+  &nbsp;|&nbsp;
+  <a href="../L02_mental-model/L02_mental-model.md">
+    Next Lesson ▶
+  </a>
+</div>
+<div align="center">
+  <a href="../../README.md" style="font-size: 24px;">
+    &gt;&gt;&gt; ไปหน้าสารบัญ &lt;&lt;&lt;
+  </a>
+</div>
+
 # บทเรียน 1 - ประวัติศาสตร์, ปัจจุบัน และ อนาคต
+
+> Video ประกอบการสอน: [https://www.youtube.com/watch?v=gglRX8qsJus](https://www.youtube.com/watch?v=gglRX8qsJus&list=PLLPNfc7CgMywiG-R6Jix_w8zqF_fxZFxr)
 
 การเรียนรู้ประวัติศาสตร์เป็นจุดเริ่มต้นที่สำคัญที่จะทำให้เราเข้าใจว่า React นั้นเกิดขึ้นมาเพื่อจุดประสงค์อะไร คนที่สร้าง React ต้องการแก้ปัญหาอะไร และทำไม React ถึงได้ถูกออกแบบมาในลักษณะนี้
 
@@ -106,5 +123,19 @@ react team ก็เลยตัดสินใจแยก react core ที่
 - https://reactjs.org/docs/implementation-notes.html
 - https://reactjs.org/docs/design-principles.html
 
+---
 
-
+<div align="center">
+  <a href="../L00_getting-started/L00_getting-started.md">
+    ◀ Previous Lesson
+  </a>
+  &nbsp;|&nbsp;
+  <a href="../L02_mental-model/L02_mental-model.md">
+    Next Lesson ▶
+  </a>
+</div>
+<div align="center">
+  <a href="../../README.md" style="font-size: 24px;">
+    &gt;&gt;&gt; ไปหน้าสารบัญ &lt;&lt;&lt;
+  </a>
+</div>

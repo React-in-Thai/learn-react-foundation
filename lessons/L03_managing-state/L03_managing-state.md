@@ -1,4 +1,21 @@
+<div align="center">
+  <a href="../L02_mental-model/L02_mental-model.md">
+    ◀ Previous Lesson
+  </a>
+  &nbsp;|&nbsp;
+  <a href="../L04_separation/L04_separation.md">
+    Next Lesson ▶
+  </a>
+</div>
+<div align="center">
+  <a href="../../README.md" style="font-size: 24px;">
+    &gt;&gt;&gt; ไปหน้าสารบัญ &lt;&lt;&lt;
+  </a>
+</div>
+
 # บทเรียน 3 - จัดการ state
+
+> Video ประกอบการสอน: [https://www.youtube.com/watch?v=fbhoZlCwM4U](https://www.youtube.com/watch?v=fbhoZlCwM4U&list=PLLPNfc7CgMywiG-R6Jix_w8zqF_fxZFxr)
 
 การเขียนหน้าบ้านจะต้องจัดการกับ state เป็นหลัก สำหรับในคอร์สนี้เราจะแบ่ง state ออกเป็น 2 กลุ่ม
 - UI state: ข้อมูลที่ users นั้น interact ด้วย เช่น ข้อความที่พิม ตัวเลือกต่างๆที่สามารถเปลี่ยนได้
@@ -123,3 +140,20 @@ const [history, setHistory] = React.useState([]);
 ### 5th requirement - Deleting note
 
 เพิ่มฟีเจอร์ลบโน้ตที่อยู่ในลิสต์
+
+---
+
+<div align="center">
+  <a href="../L02_mental-model/L02_mental-model.md">
+    ◀ Previous Lesson
+  </a>
+  &nbsp;|&nbsp;
+  <a href="../L04_separation/L04_separation.md">
+    Next Lesson ▶
+  </a>
+</div>
+<div align="center">
+  <a href="../../README.md" style="font-size: 24px;">
+    &gt;&gt;&gt; ไปหน้าสารบัญ &lt;&lt;&lt;
+  </a>
+</div>

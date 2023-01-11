@@ -1,4 +1,21 @@
+<div align="center">
+  <a href="../L01_introduction/L01_introduction.md">
+    ◀ Previous Lesson
+  </a>
+  &nbsp;|&nbsp;
+  <a href="../L03_managing-state/L03_managing-state.md">
+    Next Lesson ▶
+  </a>
+</div>
+<div align="center">
+  <a href="../../README.md" style="font-size: 24px;">
+    &gt;&gt;&gt; ไปหน้าสารบัญ &lt;&lt;&lt;
+  </a>
+</div>
+
 # บทเรียน 2 - Mental Model
+
+> Video ประกอบการสอน: [https://www.youtube.com/watch?v=kFFBREQGtYA](https://www.youtube.com/watch?v=kFFBREQGtYA&list=PLLPNfc7CgMywiG-R6Jix_w8zqF_fxZFxr)
 
 สำหรับท่านใดที่ยังไม่เคยใช้งาน React มาก่อน ผมอยากให้ลองทำ
 
@@ -235,3 +252,20 @@ setTimeout(() => {
 ```
 
 จากนั้น save แล้ว refresh บน browser อีกครั้ง
+
+---
+
+<div align="center">
+  <a href="../L01_introduction/L01_introduction.mdd">
+    ◀ Previous Lesson
+  </a>
+  &nbsp;|&nbsp;
+  <a href="../L03_managing-state/L03_managing-state.md">
+    Next Lesson ▶
+  </a>
+</div>
+<div align="center">
+  <a href="../../README.md" style="font-size: 24px;">
+    &gt;&gt;&gt; ไปหน้าสารบัญ &lt;&lt;&lt;
+  </a>
+</div>
